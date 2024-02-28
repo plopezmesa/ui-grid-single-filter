@@ -37,6 +37,7 @@
             row.singleFilterRowFilterData = filterData;
           }
 
+          filterData = filterData.replace(/(\r\n|\n|\r)/gm, "");
           var match = filterData.match(matcher);
           if ( !match ){
             row.visible = false;
